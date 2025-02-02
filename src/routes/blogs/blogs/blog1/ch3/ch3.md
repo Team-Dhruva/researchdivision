@@ -2,7 +2,7 @@
 
 ### Understanding our neighbours better (1970-90)
 
-*November 21, 2024*  
+*January 19, 2024*  
 *By Prarthana and Atharva*
 
 ---

@@ -2,11 +2,15 @@
 
 ### A harbour to sail in the stellar winds (1990-2000)
 
-*November 21, 2024*  
+*January 26, 2024*  
 *By Prarthana and Atharva*
 
 ---
-![ISS](https://i.pinimg.com/236x/ac/5d/bb/ac5dbb3ecbcc72e51d520cc019c50b5f.jpg)
+<div style="text-align: center;">
+  <img src="https://images-assets.nasa.gov/image/iss056e201248/iss056e201248~large.jpg?w=1920&h=1280&fit=crop&crop=faces%2Cfocalpoint" alt="ISS" style="width:300px; height:auto;">
+  <br>
+Fig.1 The International Space Station
+</div>
 
 It was not easy for any nation to single handedly pull-out this mammoth mission and ultimately gave rise to a mission that erased the political divide for greater good. A cause which made foes each other's friends. A mission that got all space agencies together under one umbrella. Around the 1970s,the US and USSR decided to call off the space race and began to contemplate potential collaborations. Political tensions and crunch of funds put the idea of space station in jeopardy and gave rise to new collaborations. The US and USSR joined hands and laid building blocks for what we know as the giant international space station. The International Space Station was taken into space piece-by-piece and gradually built in orbit using spacewalking astronauts and robotics. Most missions used NASA's space shuttle to carry up the heavier pieces, although some individual modules were launched on single-use rockets.
 
@@ -16,7 +20,11 @@ The myths associated with the international space station can be hilarious at ti
 
 
 
-![HALCA](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQecshKjAhMQXusraqbSpXSOJPDpZlNXpQgIPfWDd7yFr5mKZ678d18bxPDBEmvUj8_jUmp7hsBsgD17AoWUzKHyrYUP0dMBNzo2wDcSg)
+<div style="text-align: center;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqsiXoAUIFYiRTZjBs745OS6Rs4njegCMbtA&s" alt="HALCA" style="width:300px; height:auto;">
+  <br>
+Fig.2 HALCA (Highly Advanced Laboratory for Communications and Astronomy)
+</div>
 
 
 Special mention to NASA's NEAR(Near Earth Asteroid Rendezvous). It was the first spacecraft to orbit an asteroid named Eros and also the first to land on one. Yes, land on one, remarkably, the spacecraft survived touchdown on the asteroid and returned valuable data for two weeks in spite of not being designed as a lander. It made use of earth's gravity for flying assistance.
