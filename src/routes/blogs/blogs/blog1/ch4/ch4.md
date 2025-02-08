@@ -7,7 +7,7 @@
 
 ---
 <div style="text-align: center;">
-  <img src="https://images-assets.nasa.gov/image/iss056e201248/iss056e201248~large.jpg?w=1920&h=1280&fit=crop&crop=faces%2Cfocalpoint" alt="ISS" style="width:300px; height:auto;">
+  <img src="https://images-assets.nasa.gov/image/iss056e201248/iss056e201248~large.jpg?w=1920&h=1280&fit=crop&crop=faces%2Cfocalpoint" alt="ISS" style="width:100%; max-width:700px; height:auto;">
   <br>
 Fig.1 The International Space Station
 </div>
@@ -21,7 +21,7 @@ The myths associated with the international space station can be hilarious at ti
 
 
 <div style="text-align: center;">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqsiXoAUIFYiRTZjBs745OS6Rs4njegCMbtA&s" alt="HALCA" style="width:300px; height:auto;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqsiXoAUIFYiRTZjBs745OS6Rs4njegCMbtA&s" alt="HALCA" style="width:100%; max-width:700px; height:auto;">
   <br>
 Fig.2 HALCA (Highly Advanced Laboratory for Communications and Astronomy)
 </div>

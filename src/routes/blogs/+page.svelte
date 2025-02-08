@@ -1,15 +1,33 @@
 <script>
   import Blog from "./Blog.svelte";
-  import blog1chapter1 from "./blogs/blog1/ch1/ch1.md";
   import Blog1 from "$lib/BlogCover/Blog1.jpg";
   import Blog2 from "$lib/BlogCover/Blog2.jpeg";
   import Blog3 from "$lib/BlogCover/Blog3.jpeg";
+  import blog1chapter1 from "./blogs/blog1/ch1/ch1.md";
   import blog1chapter2 from "./blogs/blog1/ch2/ch2.md";
   import blog1chapter3 from "./blogs/blog1/ch3/ch3.md";
   import blog1chapter4 from "./blogs/blog1/ch4/ch4.md";
   import blog1chapter5 from "./blogs/blog1/ch5/ch5.md";
+  import blog2chapter1 from "./blogs/blog2/ch1/ch1.md";
 
   const blogs = [
+    {
+      id: 2,
+      title: "Proof of zero height conjecture",
+      author: "Varenya",
+      description:
+        "Ever heard of a mathematical theory that's all about staying low? Richard Brauer’s Zero Height Conjecture suggests that some algebraic numbers just refuse to grow! The height may be zero, but its packed with algebra and number theory.",
+      chapters: [
+        {
+          id: 1,
+          title: "The Math of Being Down to Earth: Zero Height Explained",
+          markdown: blog2chapter1,
+        },
+      ],
+      nextChapterDate: "16-02-2025",
+      image: Blog2,
+      lastUpdated: "09-02-2025",
+    },
     {
       id: 1,
       title: "History of Space Exploration",
@@ -47,17 +65,17 @@
       image: Blog1,
       lastUpdated: "02-02-2025",
     },
-    {
-      id: 2,
-      title: "Exoplanets: Chasing the Alien World",
-      author: "Khushi and Pratiksha",
-      description:
-        "Whether you're a space nerd or just curious about the universe, you're in the right place. Let's explore these distant worlds together and discover what makes them so fascinating. Ready to blast off?",
-      chapters: [],
-      nextChapterDate: "Upcoming on 8-02-2025",
-      image: Blog2,
-      lastUpdated: "",
-    },
+    // {
+    //   id: 2,
+    //   title: "Exoplanets: Chasing the Alien World",
+    //   author: "Khushi and Pratiksha",
+    //   description:
+    //     "Whether you're a space nerd or just curious about the universe, you're in the right place. Let's explore these distant worlds together and discover what makes them so fascinating. Ready to blast off?",
+    //   chapters: [],
+    //   nextChapterDate: "Upcoming on 8-02-2025",
+    //   image: Blog2,
+    //   lastUpdated: "",
+    // },
     // {
     //   id: 3,
     //   title: "Beyond Earth Among The Stars",

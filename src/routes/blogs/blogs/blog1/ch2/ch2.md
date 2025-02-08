@@ -8,7 +8,7 @@
 ---
 <br>
 <div style="text-align: center;">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnvEQOwP5cRil8ZukboDxtgqm9nPsT7kd1A&s" alt="Vostok" style="width:300px; height:auto;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnvEQOwP5cRil8ZukboDxtgqm9nPsT7kd1A&s" alt="Vostok" style="width:100%; max-width:700px; height:auto;">
   <br>
   Fig1. Vostok
 </div>
@@ -18,7 +18,7 @@ This decade marked the beginning of the space era for mankind. A decade where po
 <br>
 <br>
 <div style="text-align: center;">
-  <img src="https://i.pinimg.com/236x/dc/9d/87/dc9d87a11939e487401a5c25efd0d18c.jpg" alt="alentina Tereshkova" style="width:300px; height:auto;">
+  <img src="https://i.pinimg.com/236x/dc/9d/87/dc9d87a11939e487401a5c25efd0d18c.jpg" alt="alentina Tereshkova" style="width:100%; max-width:700px; height:auto;">
   <br>
 Fig2. Valentina Tereshkova
 </div>
@@ -33,7 +33,7 @@ On July 20 1969, Neil Armstrong and Edwin Buzz Aldrin set out to do something on
 
 <br>
 <div style="text-align: center;">
-  <img src="https://i.natgeofe.com/k/1ef0d42f-adf7-49e7-a2de-7d381fd18f95/moon-landing-textimage_4x3.png" alt="One giant leap for mankind" style="width:300px; height:auto;">
+  <img src="https://i.natgeofe.com/k/1ef0d42f-adf7-49e7-a2de-7d381fd18f95/moon-landing-textimage_4x3.png" alt="One giant leap for mankind" style="width:100%; max-width:700px; height:auto;">
   <br>
 Fig3. One giant leap for mankind
 </div>
