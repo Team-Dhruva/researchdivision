@@ -9,6 +9,7 @@
   import blog1chapter4 from "./blogs/blog1/ch4/ch4.md";
   import blog1chapter5 from "./blogs/blog1/ch5/ch5.md";
   import blog2chapter1 from "./blogs/blog2/ch1/ch1.md";
+  import blog2chapter2 from "./blogs/blog2/ch2/ch2.md";
 
   const blogs = [
     {
@@ -23,10 +24,15 @@
           title: "The Math of Being Down to Earth: Zero Height Explained",
           markdown: blog2chapter1,
         },
+        {
+          id: 2,
+          title: "The solution to this: let's disagree to agree",
+          markdown: blog2chapter2,
+        },
       ],
-      nextChapterDate: "16-02-2025",
+      nextChapterDate: "",
       image: Blog2,
-      lastUpdated: "09-02-2025",
+      lastUpdated: "15-02-2025",
     },
     {
       id: 1,
