@@ -3,7 +3,7 @@
   import Blog1 from "$lib/BlogCover/Blog1.jpg";
   import Blog2 from "$lib/BlogCover/Blog2.jpeg";
   import Blog3 from "$lib/BlogCover/Blog3.jpeg";
-  import Blog4 from "$lib/BlogCover/Blog4.jpeg";
+  import Blog4 from "$lib/BlogCover/Blog4.png";
   import blog1chapter1 from "./blogs/blog1/ch1/ch1.md";
   import blog1chapter2 from "./blogs/blog1/ch2/ch2.md";
   import blog1chapter3 from "./blogs/blog1/ch3/ch3.md";
