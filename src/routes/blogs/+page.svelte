@@ -3,6 +3,7 @@
   import Blog1 from "$lib/BlogCover/Blog1.jpg";
   import Blog2 from "$lib/BlogCover/Blog2.jpeg";
   import Blog3 from "$lib/BlogCover/Blog3.jpeg";
+  import Blog4 from "$lib/BlogCover/Blog4.jpeg";
   import blog1chapter1 from "./blogs/blog1/ch1/ch1.md";
   import blog1chapter2 from "./blogs/blog1/ch2/ch2.md";
   import blog1chapter3 from "./blogs/blog1/ch3/ch3.md";
@@ -10,8 +11,27 @@
   import blog1chapter5 from "./blogs/blog1/ch5/ch5.md";
   import blog2chapter1 from "./blogs/blog2/ch1/ch1.md";
   import blog2chapter2 from "./blogs/blog2/ch2/ch2.md";
+  import blog3chapter1 from "./blogs/blog3/ch1/ch1.md";
 
   const blogs = [
+    {
+      id: 3,
+      title: "Inevitable Patterns in sets of numbers",
+      author: "Amrutha",
+      description:
+        "In 2024, the field of mathematics witnessed a remarkable breakthrough, thanks to the collaborative efforts of Ashwin Sah and Mehtaab Sawhney from MIT, and James Leng from UCLA.",
+      chapters: [
+        {
+          id: 1,
+          title: "Inevitable Patterns in sets of numbers",
+          markdown: blog3chapter1,
+        },
+        
+      ],
+      nextChapterDate: "",
+      image: Blog4,
+      lastUpdated: "23-02-2025",
+    },
     {
       id: 2,
       title: "Proof of zero height conjecture",
