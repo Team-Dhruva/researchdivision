@@ -1,31 +1,36 @@
 <script>
     // You can modify the image source here or bind it dynamically
-    let imageSrc = "/path/to/your/image.jpg"; // Replace with the actual image path
+    import luna from "./img/luna.webp" // Replace with the actual image path
 </script>
 
 <style>
+    :root{
+        --heading-color: #cad6f2;
+    }
+
     .Main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center; /* Align text and images center */
+        text-align: justify; /* Align text and images center */
         padding: 20px; /* Add padding for better layout */
     }
 
     .Head, .vision {
-        color: #007bff; /* Blue color */
-        font-size: 24px; /* Font size */
+        color: var(--heading-color); /* Blue color */
+        font-size: 3em; /* Font size */
         font-weight: bold; /* Bold text */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+        /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Shadow for depth */
         letter-spacing: 1px; /* Spacing between letters */
         line-height: 1.5; /* Line height */
         margin: 10px 0; /* Add spacing between sections */
     }
 
-    .Text, .vision-text {
-        padding: 10px; /* Adjust padding for smaller screens */
+    .text, .vision-text {
+        padding: 5px; /* Adjust padding for smaller screens */
         justify-content: center;
-        font-size: 18px;
+        max-width: 80%;
+        font-size: 1.2em;
         color: white;
         font-weight: bold;
         letter-spacing: 1px; /* Spacing between letters */
@@ -52,7 +57,7 @@
             font-size: 20px; /* Reduce font size for smaller screens */
         }
 
-        .Text, .vision-text {
+        .text, .vision-text {
             font-size: 16px; /* Adjust font size */
         }
 
@@ -79,17 +84,17 @@
 <div class="Main">
     <!-- Image Section -->
     <div class="image-container">
-        <img src="https://i.pinimg.com/736x/c6/9b/d3/c69bd3ab92584b8065edf60479df5897.jpg" alt="Indian Astrophysics" />
-        <img src="https://i.pinimg.com/736x/c6/9b/d3/c69bd3ab92584b8065edf60479df5897.jpg" alt="Indian Astrophysics" />
-        <img src="https://i.pinimg.com/736x/c6/9b/d3/c69bd3ab92584b8065edf60479df5897.jpg" alt="Indian Astrophysics" />
+        <img src={luna} alt="Indian Astrophysics" />
+        <img src={luna} alt="Indian Astrophysics" />
+        <img src={luna} alt="Indian Astrophysics" />
     </div>
-    <h1 class="Head">Unveil secrets of Indian Astrophysics</h1>
+    <h1 class="Head">INDIAN ASTROPHYSICS</h1>
   
-    <p class="Text"> 
-        Indian astrophysics has made significant strides over the years, with contributions ranging from theoretical advancements to observational discoveries.
+    <p class="text"> 
+        Discover the universe through India’s timeless astronomical wisdom. For centuries, Indian scholars observed the skies, mapping planetary movements and decoding celestial patterns.Here, we delve into that heritage; offering a unique perspective on humanity’s ongoing quest to understand the stars.
     </p>
-  
-    <h1 class="vision">Upcoming Review Papers</h1>
+    <h1 class="Head">Here are some of our interesting reads!</h1>
+    <h1 class="vision">Research Papers</h1>
     <p class="vision-text">
         Indian Calendar
     </p>

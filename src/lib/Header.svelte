@@ -153,11 +153,11 @@
         font-weight: bold;
     }
     nav ul li[aria-current="page"] a {
-        color: aqua;
+        color: #72a1dd;
     }
 
     nav ul li a:hover {
-        color: #0d92f4;
+        color: #32567e;
     }
 
     /* Responsive Behavior */
