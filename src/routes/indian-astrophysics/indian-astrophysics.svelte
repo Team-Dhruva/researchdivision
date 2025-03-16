@@ -1,6 +1,34 @@
 <script>
     // You can modify the image source here or bind it dynamically
     import luna from "./img/luna.webp" // Replace with the actual image path
+
+    import BlogList from './BlogList.svelte';
+    import BlogDetail from './BlogDetail.svelte';
+    import ChapterDetail from '../contents/ChapterDetail.svelte';
+  
+    export let blogs = []; // List of blogs passed as a prop
+
+    let selectedBlog = null;
+    let selectedChapter = null;
+
+    // Function to handle blog selection
+    function openBlog(event) {
+    const blog = event.detail; // Extract the blog data from the event
+    selectedBlog = blog;
+    selectedChapter = null;
+    }
+
+    // Function to handle chapter selection
+    function openChapter(chapter) {
+    selectedChapter = chapter; // Set the selected chapter
+    }
+
+    // Function to go back to the blog list
+    function goBackToBlogs() {
+    selectedBlog = null; // Reset blog state
+    selectedChapter = null; // Reset chapter state
+    }
+
 </script>
 
 <style>
@@ -94,6 +122,25 @@
         Discover the universe through India’s timeless astronomical wisdom. For centuries, Indian scholars observed the skies, mapping planetary movements and decoding celestial patterns.Here, we delve into that heritage; offering a unique perspective on humanity’s ongoing quest to understand the stars.
     </p>
     <h1 class="Head">Here are some of our interesting reads!</h1>
+    <!-- Blog List -->
+        {#if !selectedBlog && !selectedChapter}
+        <BlogList {blogs} on:selectBlog={openBlog} />
+        {/if}
+
+        <!-- Blog Details -->
+        {#if selectedBlog && !selectedChapter}
+        <BlogDetail {selectedBlog} on:back={() => (selectedBlog = null)} on:selectChapter={openChapter} />
+        {/if}
+
+        <!-- Chapter Details -->
+        {#if selectedChapter}
+        <ChapterDetail 
+        {selectedChapter} 
+        on:back={() => (selectedChapter = null)} 
+        on:backToBlogs={() => (goBackToBlogs())} 
+        />
+        {/if}
+
     <h1 class="vision">Research Papers</h1>
     <p class="vision-text">
         Indian Calendar
