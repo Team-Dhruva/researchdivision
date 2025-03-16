@@ -2,31 +2,15 @@
     // You can modify the image source here or bind it dynamically
     import luna from "./img/luna.webp" // Replace with the actual image path
 
-    import BlogList from './BlogList.svelte';
-    import BlogDetail from './BlogDetail.svelte';
-    import ChapterDetail from '../contents/ChapterDetail.svelte';
-  
-    export let blogs = []; // List of blogs passed as a prop
+    const blogs = [
+        { name: "Indian Calendar", url: "/indian-calendar" },
+        { name: "Stellarium Research", url: "/stellarium-research" },
+        { name: "Ancient Observatories", url: "/ancient-observatories" },
+        { name: "Modern Indian Astronomy", url: "/modern-astronomy" }
+    ];
 
-    let selectedBlog = null;
-    let selectedChapter = null;
-
-    // Function to handle blog selection
-    function openBlog(event) {
-    const blog = event.detail; // Extract the blog data from the event
-    selectedBlog = blog;
-    selectedChapter = null;
-    }
-
-    // Function to handle chapter selection
-    function openChapter(chapter) {
-    selectedChapter = chapter; // Set the selected chapter
-    }
-
-    // Function to go back to the blog list
-    function goBackToBlogs() {
-    selectedBlog = null; // Reset blog state
-    selectedChapter = null; // Reset chapter state
+    function navigate(url) {
+        window.location.href = url; // Redirect on click
     }
 
 </script>
@@ -34,6 +18,8 @@
 <style>
     :root{
         --heading-color: #cad6f2;
+        --clickable-color: #32567e;
+        --alt-black: #000326;
     }
 
     .Main {
@@ -80,6 +66,39 @@
         border-radius: 8px; /* Optional: Add rounded corners */
     }
 
+    /* blog text stuff */
+    .blog-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .blog-item {
+        background-color: var(--alt-black);
+        border-color: var(--clickable-color);
+        color: white;
+        padding: 15px 25px;
+        border-radius: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 250px;
+        height: 250px;
+    }
+
+    .blog-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 5px 15px var(--alt-black);
+    }
+
+    .blog-item:active {
+        transform: translateY(0);
+    }
+
     @media (max-width: 768px) {
         .Head, .vision {
             font-size: 20px; /* Reduce font size for smaller screens */
@@ -122,25 +141,14 @@
         Discover the universe through India’s timeless astronomical wisdom. For centuries, Indian scholars observed the skies, mapping planetary movements and decoding celestial patterns.Here, we delve into that heritage; offering a unique perspective on humanity’s ongoing quest to understand the stars.
     </p>
     <h1 class="Head">Here are some of our interesting reads!</h1>
-    <!-- Blog List -->
-        {#if !selectedBlog && !selectedChapter}
-        <BlogList {blogs} on:selectBlog={openBlog} />
-        {/if}
-
-        <!-- Blog Details -->
-        {#if selectedBlog && !selectedChapter}
-        <BlogDetail {selectedBlog} on:back={() => (selectedBlog = null)} on:selectChapter={openChapter} />
-        {/if}
-
-        <!-- Chapter Details -->
-        {#if selectedChapter}
-        <ChapterDetail 
-        {selectedChapter} 
-        on:back={() => (selectedChapter = null)} 
-        on:backToBlogs={() => (goBackToBlogs())} 
-        />
-        {/if}
-
+        <!-- Blog links section -->
+        <div class="blog-links">
+            {#each blogs as blog}
+                <div class="blog-item" on:click={() => navigate(blog.url)}>
+                    {blog.name}
+                </div>
+            {/each}
+        </div>
     <h1 class="vision">Research Papers</h1>
     <p class="vision-text">
         Indian Calendar
