@@ -1,12 +1,15 @@
 <script>
     // You can modify the image source here or bind it dynamically
     import luna from "./img/luna.webp" // Replace with the actual image path
-
+    import calendar_image from "./img/indiancalendar.webp"
+    import stellarium_image from "./img/stellarium.webp"
+    import dhruvalogo from "./img/defaultimg.webp"
+    
     const blogs = [
-        { name: "Indian Calendar", url: "/indian-calendar" },
-        { name: "Stellarium Research", url: "/stellarium-research" },
-        { name: "Ancient Observatories", url: "/ancient-observatories" },
-        { name: "Modern Indian Astronomy", url: "/modern-astronomy" }
+        { title: "Indian Calendar", url: "/indian-astrophysics/indian-calendar", thumb: calendar_image, desc:"lorem ipsum", author:"chuck norris"},
+        { title: "Stellarium Research", url: "/indian-astrophysics/stellarium-research", thumb: stellarium_image,desc:"lorem ipsum", author:"chuck norris"},
+        { title: "Ancient Observatories", url: "/indian-astrophysics/ancient-observatories", thumb: dhruvalogo, desc:"lorem ipsum", author:"chuck norris"},
+        { title: "Modern Indian Astronomy", url: "/indian-astrophysics/modern-astronomy", thumb: dhruvalogo, desc:"lorem ipsum", author:"chuck norris"}
     ];
 
     function navigate(url) {
@@ -14,6 +17,44 @@
     }
 
 </script>
+
+<div class="Main">
+    <!-- Image Section -->
+    <div class="image-container">
+        <img src={luna} alt="Indian Astrophysics" />
+        <img src={luna} alt="Indian Astrophysics" />
+        <img src={luna} alt="Indian Astrophysics" />
+    </div>
+    <h1 class="Head">INDIAN ASTROPHYSICS</h1>
+  
+    <p class="text"> 
+        Discover the universe through India’s timeless astronomical wisdom. For centuries, Indian scholars observed the skies, mapping planetary movements and decoding celestial patterns.Here, we delve into that heritage; offering a unique perspective on humanity’s ongoing quest to understand the stars.
+    </p>
+    <h1 class="Head">Here are some of our interesting reads!</h1>
+        <!-- Blog list section -->
+         <div class="blog-slider">
+            <div class="blog-list">
+                {#each blogs as blog}
+                    <div class="blog-item" on:click={() => navigate(blog.url)}>
+                        <div class="img-wrapper">
+                            <img class="blog-img" src={blog.thumb} alt={blog.title} />
+                        </div>
+                        <div class="blog-content">
+                            <h3>{blog.title}</h3>
+                            <p>{blog.desc}</p>
+                            <small>Author: {blog.author}</small>
+                        </div>
+                        {blog.title}
+                    </div>
+                {/each}
+            </div>
+        </div>
+        <button class="nav prev" on:click={() => scrollBlogs(-1)}>&lt;</button>
+        <button class="nav next" on:click={() => scrollBlogs(1)}>&gt;</button>
+    <h1 class="vision">Research Papers</h1>
+    <p class="vision-text">Indian Calendar</p>
+    <p class="vision-text">Computational research using Stellarium</p>
+</div>
 
 <style>
     :root{
@@ -67,27 +108,76 @@
     }
 
     /* blog text stuff */
-    .blog-links {
+    .blog-slider {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin-top: 20px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    } .blog-slider::-webkit-scrollbar {
+        display: none;
     }
+        .blog-list {
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+        }
+            .blog-item {
+                flex: 0 0 calc(30% - 50px); /* Reduced size */
+                max-width: calc(30% - 50px);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+                border-radius: 10px;
+                overflow: hidden;
+                background: #121212;
+                border: 2px solid white;
+                cursor: pointer;
+                transition: transform 0.3s, box-shadow 0.3s;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+            }  .blog-item:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+            } .blog-item h3 {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin: 0;
+                color: #ffcc00;
+            }
 
-    .blog-item {
-        background-color: var(--alt-black);
-        border-color: var(--clickable-color);
-        color: white;
-        padding: 15px 25px;
-        border-radius: 10px;
-        font-size: 1.2em;
-        font-weight: bold;
-        text-align: center;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        width: 250px;
-        height: 250px;
+            .blog-item p {
+                font-size: 1rem;
+                margin: 0;
+                color: #ddd;
+                line-height: 1.6;
+                flex-grow: 1;
+            }
+
+            .blog-item small {
+                font-size: 0.9rem;
+                color: #999;
+            }
+    .blog-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } .img-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 140%; /* 5:7 Aspect Ratio */
+        overflow: hidden;
+        }
+    .blog-content {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        background: #1c1c1c;
+        color: #fff;
     }
 
     .blog-item:hover {
@@ -97,6 +187,39 @@
 
     .blog-item:active {
         transform: translateY(0);
+    }
+
+    .nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 10;
+    } .nav.prev {
+        left: 10px;
+    } .nav.next {
+        right: 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .blog-item {
+        flex: 0 0 calc(45% - 20px); /* Adjusted for smaller screens */
+        max-width: 45%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .blog-item {
+        flex: 0 0 calc(80% - 20px);
+        max-width: 80%;
+        }
     }
 
     @media (max-width: 768px) {
@@ -128,30 +251,4 @@
     }
 </style>
 
-<div class="Main">
-    <!-- Image Section -->
-    <div class="image-container">
-        <img src={luna} alt="Indian Astrophysics" />
-        <img src={luna} alt="Indian Astrophysics" />
-        <img src={luna} alt="Indian Astrophysics" />
-    </div>
-    <h1 class="Head">INDIAN ASTROPHYSICS</h1>
-  
-    <p class="text"> 
-        Discover the universe through India’s timeless astronomical wisdom. For centuries, Indian scholars observed the skies, mapping planetary movements and decoding celestial patterns.Here, we delve into that heritage; offering a unique perspective on humanity’s ongoing quest to understand the stars.
-    </p>
-    <h1 class="Head">Here are some of our interesting reads!</h1>
-        <!-- Blog links section -->
-        <div class="blog-links">
-            {#each blogs as blog}
-                <div class="blog-item" on:click={() => navigate(blog.url)}>
-                    {blog.name}
-                </div>
-            {/each}
-        </div>
-    <h1 class="vision">Research Papers</h1>
-    <p class="vision-text">
-        Indian Calendar
-    </p>
-    <p class="vision-text">Computational research using Stellarium</p>
-</div>
+
