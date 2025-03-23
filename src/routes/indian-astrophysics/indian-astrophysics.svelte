@@ -4,7 +4,7 @@
     import calendar_image from "./img/indiancalendar.webp"
     import stellarium_image from "./img/stellarium.webp"
     import dhruvalogo from "./img/defaultimg.webp"
-    
+
     const blogs = [
         { title: "Indian Calendar", url: "/indian-astrophysics/indian-calendar", thumb: calendar_image, desc:"lorem ipsum", author:"chuck norris"},
         { title: "Stellarium Research", url: "/indian-astrophysics/stellarium-research", thumb: stellarium_image,desc:"lorem ipsum", author:"chuck norris"},
@@ -16,6 +16,15 @@
         window.location.href = url; // Redirect on click
     }
 
+    // Function to scroll the blog list horizontally
+    function scrollBlogs(direction) {
+        const container = document.querySelector('.blog-slider');
+        const scrollAmount = container.clientWidth;
+        container.scrollBy({
+            left: direction * scrollAmount,
+            behavior: 'smooth',
+        });
+    }
 </script>
 
 <div class="Main">
@@ -26,38 +35,41 @@
         <img src={luna} alt="Indian Astrophysics" />
     </div>
     <h1 class="Head">INDIAN ASTROPHYSICS</h1>
-  
-    <p class="text"> 
+
+    <p class="text">
         Discover the universe through India’s timeless astronomical wisdom. For centuries, Indian scholars observed the skies, mapping planetary movements and decoding celestial patterns.Here, we delve into that heritage; offering a unique perspective on humanity’s ongoing quest to understand the stars.
     </p>
     <h1 class="Head">Here are some of our interesting reads!</h1>
         <!-- Blog list section -->
-         <div class="blog-slider">
-            <div class="blog-list">
-                {#each blogs as blog}
-                    <div class="blog-item" on:click={() => navigate(blog.url)}>
-                        <div class="img-wrapper">
-                            <img class="blog-img" src={blog.thumb} alt={blog.title} />
+        <div class="blog-container"> <!-- Added blog-container for relative positioning -->
+            <div class="blog-slider">
+                <div class="blog-list">
+                    {#each blogs as blog}
+                        <div class="blog-item" on:click={() => navigate(blog.url)}>
+                            <div class="img-wrapper">
+                                <img class="blog-img" src={blog.thumb} alt={blog.title} />
+                            </div>
+                            <div class="blog-content">
+                                <h3>{blog.title}</h3>
+                                <p>{blog.desc}</p>
+                                <small>Author: {blog.author}</small>
+                            </div>
+                            {blog.title}
                         </div>
-                        <div class="blog-content">
-                            <h3>{blog.title}</h3>
-                            <p>{blog.desc}</p>
-                            <small>Author: {blog.author}</small>
-                        </div>
-                        {blog.title}
-                    </div>
-                {/each}
+                    {/each}
+                </div>
             </div>
+            <!-- Navigation buttons for scrolling the blog list -->
+            <button class="nav prev" on:click={() => scrollBlogs(-1)}>&lt;</button>
+            <button class="nav next" on:click={() => scrollBlogs(1)}>&gt;</button>
         </div>
-        <button class="nav prev" on:click={() => scrollBlogs(-1)}>&lt;</button>
-        <button class="nav next" on:click={() => scrollBlogs(1)}>&gt;</button>
     <h1 class="vision">Research Papers</h1>
     <p class="vision-text">Indian Calendar</p>
     <p class="vision-text">Computational research using Stellarium</p>
 </div>
 
 <style>
-    :root{
+    :root {
         --heading-color: #cad6f2;
         --clickable-color: #32567e;
         --alt-black: #000326;
@@ -108,55 +120,63 @@
     }
 
     /* blog text stuff */
+    .blog-container {
+        position: relative; /* Ensure relative positioning for nav buttons */
+        width: 100%;
+        overflow: hidden;
+    }
+
     .blog-slider {
         display: flex;
         overflow-x: auto;
         scroll-behavior: smooth;
         scrollbar-width: none;
     } .blog-slider::-webkit-scrollbar {
-        display: none;
+        display: none; /* Hide scrollbar */
     }
-        .blog-list {
-            display: flex;
-            gap: 20px;
-            padding: 10px;
-        }
-            .blog-item {
-                flex: 0 0 calc(30% - 50px); /* Reduced size */
-                max-width: calc(30% - 50px);
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-                border-radius: 10px;
-                overflow: hidden;
-                background: #121212;
-                border: 2px solid white;
-                cursor: pointer;
-                transition: transform 0.3s, box-shadow 0.3s;
-                text-align: left;
-                display: flex;
-                flex-direction: column;
-                align-items: stretch;
-            }  .blog-item:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
-            } .blog-item h3 {
-                font-size: 1.2rem;
-                font-weight: 600;
-                margin: 0;
-                color: #ffcc00;
-            }
 
-            .blog-item p {
-                font-size: 1rem;
-                margin: 0;
-                color: #ddd;
-                line-height: 1.6;
-                flex-grow: 1;
-            }
+    .blog-list {
+        display: flex;
+        gap: 20px;
+        padding: 10px;
+    }
 
-            .blog-item small {
-                font-size: 0.9rem;
-                color: #999;
-            }
+    .blog-item {
+        flex: 0 0 calc(30% - 50px); /* Reduced size */
+        max-width: calc(30% - 50px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        overflow: hidden;
+        background: #121212;
+        border: 2px solid white;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }  .blog-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+    } .blog-item h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0;
+        color: #ffcc00;
+    }
+
+    .blog-item p {
+        font-size: 1rem;
+        margin: 0;
+        color: #ddd;
+        line-height: 1.6;
+        flex-grow: 1;
+    }
+
+    .blog-item small {
+        font-size: 0.9rem;
+        color: #999;
+    }
     .blog-img {
         position: absolute;
         top: 0;
@@ -169,7 +189,7 @@
         width: 100%;
         padding-top: 140%; /* 5:7 Aspect Ratio */
         overflow: hidden;
-        }
+    }
     .blog-content {
         padding: 15px;
         display: flex;
@@ -191,7 +211,7 @@
 
     .nav {
         position: absolute;
-        top: 50%;
+        top: 50%; /* Vertically center */
         transform: translateY(-50%);
         background: rgba(0, 0, 0, 0.7);
         color: white;
@@ -202,9 +222,9 @@
         cursor: pointer;
         z-index: 10;
     } .nav.prev {
-        left: 10px;
+        left: 10px; /* Position to the left edge */
     } .nav.next {
-        right: 10px;
+        right: 10px; /* Position to the right edge */
     }
 
     /* Responsive Design */
@@ -250,5 +270,3 @@
         }
     }
 </style>
-
-
