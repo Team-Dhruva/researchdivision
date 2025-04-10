@@ -10,7 +10,7 @@ Hot helium stars are peculiar stellar objects dominated by helium, rather than t
 One explanation lies in their violent past. Many hot helium stars are believed to be the remnants of binary systems where one star stripped the other of its outer hydrogen layers. In some cases, these stars could also form due to stellar mergers—imagine two stars colliding and fusing, shedding hydrogen and leaving behind a helium-rich core. Isn’t it fascinating how destruction can give rise to something so extraordinary?
 
 <div style="text-align: center;">
-  <img src="researchdivision\src\routes\blogs\blogs\blog5\ch1\img1.jpg" alt="Stripping of hydrogen envelope" style="width:300px; height:auto;">
+  <img src="https://raw.githubusercontent.com/Team-Dhruva/Blogsphotos/refs/heads/main/Blog5/img1.jpg" alt="Stripping of hydrogen envelope" style="width:300px; height:auto;">
 </div>
 
 > *(An artist’s impression of a massive star stripping the hydrogen envelope of its companion in a binary system, leaving behind a hot, helium-rich exposed core. Credit: Navid Marvi, courtesy of the Carnegie Institution for Science).*
@@ -22,7 +22,7 @@ Let’s get more specific. Hot helium stars exhibit spectral lines dominated by 
 A prime example is **BD+10°2179**, one of the brightest known helium stars. This star has been extensively studied for its peculiar chemical composition, which includes enhanced helium alongside unusual isotopic ratios of carbon and nitrogen. Such anomalies provide clues to the nuclear processes that occurred during earlier stages of its evolution.
 
 <div style="text-align: center;">
-  <img src="researchdivision\src\routes\blogs\blogs\blog5\ch1\img2.jpg" alt="Stellar evolution" style="width:300px; height:auto;">
+  <img src="https://raw.githubusercontent.com/Team-Dhruva/Blogsphotos/refs/heads/main/Blog5/img2.jpg" alt="Stellar evolution" style="width:300px; height:auto;">
 </div>
 
 The significance of these stars goes beyond their rarity. Their study allows scientists to refine models of stellar evolution, particularly for stars in the late stages of their lives. For instance, some hot helium stars are precursors to **Wolf-Rayet stars**, which are themselves candidates for supernova explosions or even the progenitors of black holes.
