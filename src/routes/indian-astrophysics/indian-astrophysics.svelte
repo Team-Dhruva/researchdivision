@@ -6,7 +6,7 @@
     import dhruvalogo from "./img/defaultimg.webp"
 
     const blogs = [
-        { title: "Indian Calendar", url: "/indian-astrophysics/indian-calendar", thumb: calendar_image, desc:"lorem ipsum", author:"chuck norris"},
+        { title: "Nakshatra", url: "/indian-astrophysics/nakshatra", thumb: calendar_image, desc:"lorem ipsum", author:"chuck norris"},
         { title: "Stellarium Research", url: "/indian-astrophysics/stellarium-research", thumb: stellarium_image,desc:"lorem ipsum", author:"chuck norris"},
         { title: "Ancient Observatories", url: "/indian-astrophysics/ancient-observatories", thumb: dhruvalogo, desc:"lorem ipsum", author:"chuck norris"},
         { title: "Modern Indian Astronomy", url: "/indian-astrophysics/modern-astronomy", thumb: dhruvalogo, desc:"lorem ipsum", author:"chuck norris"}
@@ -24,7 +24,7 @@
             left: direction * scrollAmount,
             behavior: 'smooth',
         });
-    }
+    }   
 </script>
 
 <div class="Main">
@@ -36,7 +36,7 @@
     </div>
     <h1 class="Head">INDIAN ASTROPHYSICS</h1>
 
-    <p class="text">
+    <p class="Desc">
         Discover the universe through India’s timeless astronomical wisdom. For centuries, Indian scholars observed the skies, mapping planetary movements and decoding celestial patterns.Here, we delve into that heritage; offering a unique perspective on humanity’s ongoing quest to understand the stars.
     </p>
     <h1 class="Head">Here are some of our interesting reads!</h1>
@@ -93,7 +93,7 @@
         margin: 10px 0; /* Add spacing between sections */
     }
 
-    .text, .vision-text {
+    .Desc, .vision-text {
         padding: 5px; /* Adjust padding for smaller screens */
         justify-content: center;
         max-width: 80%;
