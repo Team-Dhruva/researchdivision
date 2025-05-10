@@ -12,23 +12,30 @@
     <h1 class="Head">NAKSHATRA</h1>
 
     <p class="Desc">nakshatra blog desc</p>
+    
     <div class="TableOfContents">
         Table of Contents
         <div class="TableOfContents-separator"></div>
     </div>
+    
+    <div class="BlogContent">
     <div>
         <h2 class="ChapterTitle">A1: AN INTRODUCTION TO NAKSHATRAS</h2>
-        <p>Authored by Pranati Rao, IA</p>
-        <div class="BlogContent">
+        <p class="AuthorName">Authored by Pranati Rao, IA</p>
+        <div class="ChapterContent">
             {@html Chapter1}
         </div>
     </div>
+    </div>
+
+    <div class="BlogContent">
     <div>
         <h2 class="ChapterTitle">A2: THE ASTRONOMICAL RELEVANCE OF NAKSHATRAS</h2>
-        <p>Authored by Nithyashree S, IA</p>
-        <div class="blog-content">
+        <p class="AuthorName">Authored by Nithyashree S, IA</p>
+        <div class="ChapterContent">
             {@html Chapter2}
         </div>
+    </div>
     </div>
 </div>
 
@@ -38,6 +45,7 @@
         --clickable-color: #32567e;
         --alt-black: #000326;
         --chapter-background: #2e2e2e;
+        --author-color: #2B6ABC;
     }
 
     .Main {
@@ -47,7 +55,7 @@
         padding: 20px;
     }
 
-    .Head, .vision {
+    .Head{
         color: var(--heading-color);
         font-size: 3em;
         font-weight: bold;
@@ -78,7 +86,17 @@
         width: 100%; /* Make the separator span the width */
     }
 
-    
+    .BlogContent {
+        width: 90%; /* Default to a large percentage for smaller screens */
+        max-width: 70%; /* Limit to 70% on larger screens */
+        background-color: #2e2e2e; /* Gray background */
+        border-radius: 10px; /* Rounded corners */
+        padding: 20px;
+        margin: 20px 0; /* Add some top and bottom margin */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Left align text within */
+    }
 
     .ChapterTitle {
         color: var(--heading-color);
@@ -89,5 +107,10 @@
         text-align: center;
         width: 100%; /* Take full width to be centered in flex container */
         margin: 15px 0; /* Add more spacing for chapter titles */
+    } .AuthorName{
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0;
+        color: var(--heading-color)
     }
 </style>
