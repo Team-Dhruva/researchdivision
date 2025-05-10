@@ -6,6 +6,13 @@
 
     import Ch2_import from "../../../../static/iaposts/chapter2.md?raw"
     const Chapter2 = marked(Ch2_import);
+
+    function scrollToChapter(id) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
 </script>
 
 <div class="Main">
@@ -13,12 +20,25 @@
 
     <p class="Desc">nakshatra blog desc</p>
     
-    <div class="TableOfContents">
-        Table of Contents
-        <div class="TableOfContents-separator"></div>
+    <div class="TOC-Container">
+        <div class="TableOfContents">
+            Table of Contents
+        </div>
+        <div class="TOC-Table rounded-box">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><button on:click={() => scrollToChapter('chapter1')}>A1: AN INTRODUCTION TO NAKSHATRAS</button></td>
+                    </tr>
+                    <tr>
+                        <td><button on:click={() => scrollToChapter('chapter2')}>A2: THE ASTRONOMICAL RELEVANCE OF NAKSHATRAS</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     
-    <div class="BlogContent">
+    <div class="BlogContent" id="chapter1">
     <div>
         <h2 class="ChapterTitle">A1: AN INTRODUCTION TO NAKSHATRAS</h2>
         <p class="AuthorName">Authored by Pranati Rao, IA</p>
@@ -28,7 +48,7 @@
     </div>
     </div>
 
-    <div class="BlogContent">
+    <div class="BlogContent" id="chapter2">
     <div>
         <h2 class="ChapterTitle">A2: THE ASTRONOMICAL RELEVANCE OF NAKSHATRAS</h2>
         <p class="AuthorName">Authored by Nithyashree S, IA</p>
@@ -76,6 +96,57 @@
         margin: 10px 0; /* Add spacing */
     }
 
+    .TOC-Container {
+        width: 200px; /* Adjust width as needed */
+        margin-right: 20px; /* Add some space between TOC and main content */
+        flex-shrink: 0; /* Prevent TOC from shrinking */
+    }
+
+    .TableOfContents {
+        text-align: left;
+        font-size: 1.2em; /* Slightly smaller than before */
+        color: white;
+        margin-top: 0; /* Adjust top margin */
+        margin-bottom: 5px;
+        padding-bottom: 2px;
+        border-bottom: 1px solid white;
+        width: 100%;
+    }
+
+    .TOC-Table {
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    .TOC-Table table {
+        width: 100%;
+    }
+
+    .TOC-Table td {
+        padding: 5px 0;
+    }
+
+    .TOC-Table button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 0.9em; /* Adjust button font size */
+        cursor: pointer;
+        text-align: left;
+        padding: 3px 0;
+        display: block;
+    }
+
+    .TOC-Table button:hover {
+        color: var(--heading-color);
+    }
+
+    /* New class for the rounded background of the TOC table */
+    .rounded-box {
+        background-color: var(--chapter-background); /* Gray background */
+        border-radius: 10px; /* Rounded corners */
+        padding: 10px; /* Add some padding inside the box */
+    }
     .TableOfContents {
         text-align: left; /* Left align the text */
         font-size: 1.5em;
