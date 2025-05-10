@@ -4,6 +4,7 @@
   import Blog2 from "$lib/BlogCover/Blog2.jpeg";
   import Blog3 from "$lib/BlogCover/Blog3.jpeg";
   import Blog4 from "$lib/BlogCover/Blog4.png";
+  import Blog5 from "$lib/BlogCover/Blog5.png";
   import blog1chapter1 from "./blogs/blog1/ch1/ch1.md";
   import blog1chapter2 from "./blogs/blog1/ch2/ch2.md";
   import blog1chapter3 from "./blogs/blog1/ch3/ch3.md";
@@ -12,8 +13,27 @@
   import blog2chapter1 from "./blogs/blog2/ch1/ch1.md";
   import blog2chapter2 from "./blogs/blog2/ch2/ch2.md";
   import blog3chapter1 from "./blogs/blog3/ch1/ch1.md";
+  import blog5chapter1 from "./blogs/blog5/ch1/ch1.md";
 
   const blogs = [
+     {
+      id: 5,
+      title: "The Mystery of Hot Helium Stars",
+      author: "V Megha",
+      description:
+        "In 2024, the field of astrophysics witnessed a remarkable breakthrough in understanding helium stars, read to learn more",
+      chapters: [
+        {
+          id: 1,
+          title: "The Mystery of Hot Helium Stars",
+          markdown: blog5chapter1,
+        },
+        
+      ],
+      nextChapterDate: "",
+      image: Blog5,
+      lastUpdated: "10-04-2025",
+    },
     {
       id: 3,
       title: "Inevitable Patterns in sets of numbers",
