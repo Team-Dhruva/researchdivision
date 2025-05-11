@@ -70,7 +70,7 @@ Whether you’re a hardcore astrophysics fan or just getting curious, one thing�
 
 **Author: Atharva Agarwal**
 
-# Enhancing Sound Source Localization Using Image Processing Techniques in Circular Sensor Arrays:
+## **Enhancing Sound Source Localization Using Image Processing Techniques in Circular Sensor Arrays:**
 
 A recent study published in IEEE introduces a new method for sound source localization using **circular sensor arrays**, particularly effective in conditions with **weak signals** or **limited data**. The method combines traditional acoustic processing with **image sharpening techniques** borrowed from astronomy.
 
@@ -85,7 +85,7 @@ B.-H. Wu, _"Application of Deconvolution Processing in Passive Localization Tech
 DOI: [10.1109/UT61067.2025.10947387](https://doi.org/10.1109/UT61067.2025.10947387)
 
 
-#  Advancing Orbit Determination with Jet Transport Methods for Limited Observational Data:
+## ** Advancing Orbit Determination with Jet Transport Methods for Limited Observational Data:**
 This study introduces advanced techniques for **orbit determination (OD)**, focusing on cases with limited data—such as **"too short arcs" (TSAs)** for tracking near-Earth objects (NEOs).
 
 Three key methods were developed:
@@ -102,7 +102,7 @@ DOI: [10.1007/s10569-025-10246-2](https://doi.org/10.1007/s10569-025-10246-2)
 
 
 
-# X-Ray Polarization from Spreading Layers on Weakly Magnetized Neutron Stars:
+## **X-Ray Polarization from Spreading Layers on Weakly Magnetized Neutron Stars:**
 
 This theoretical study models **X-ray polarization** from **spreading layers (SLs)** on **weakly magnetized neutron stars (WMNSs)**. These SLs form where accreted matter spreads across the neutron star’s surface in binary systems.
 
