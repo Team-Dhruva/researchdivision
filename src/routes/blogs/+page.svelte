@@ -5,6 +5,7 @@
   import Blog3 from "$lib/BlogCover/Blog3.jpeg";
   import Blog4 from "$lib/BlogCover/Blog4.png";
   import Blog5 from "$lib/BlogCover/Blog5.png";
+  import Blog6 from "$lib/BlogCover/Blog6.png";
   import blog1chapter1 from "./blogs/blog1/ch1/ch1.md";
   import blog1chapter2 from "./blogs/blog1/ch2/ch2.md";
   import blog1chapter3 from "./blogs/blog1/ch3/ch3.md";
@@ -14,8 +15,26 @@
   import blog2chapter2 from "./blogs/blog2/ch2/ch2.md";
   import blog3chapter1 from "./blogs/blog3/ch1/ch1.md";
   import blog5chapter1 from "./blogs/blog5/ch1/ch1.md";
+  import blog6chapter1 from "./blogs/blog6/ch1/ch1.md";
 
   const blogs = [
+    {
+      id: 6,
+      title: "Cosmic Headlines: What the Universe Told Us This Month",
+      description:
+        "Astrophysics is a continuously evolving and fascinating field of science.Join us as we explore the breakthroughs in astrophysics each month.",
+      chapters: [
+        {
+          id: 1,
+          title: "What the Universe Told Us This Month",
+          markdown: blog6chapter1,
+        },
+        
+      ],
+      nextChapterDate: "",
+      image: Blog6,
+      lastUpdated: "11-05-2025",
+    },
      {
       id: 5,
       title: "The Mystery of Hot Helium Stars",
