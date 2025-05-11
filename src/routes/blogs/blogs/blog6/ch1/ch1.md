@@ -8,7 +8,7 @@ What if I told you the universe just did something cooler than any sci-fi movie 
 April wasn’t quiet — it was full of surprises, explosions, and new discoveries in astrophysics. From black holes behaving unexpectedly to galaxies forming before our eyes, here's what space had to say:
 
 <div style="text-align: center;">
-  <img src="https://raw.githubusercontent.com/Team-Dhruva/Blogsphotos/refs/heads/main/Blog5/img1.jpg">
+  <img src="https://raw.githubusercontent.com/Team-Dhruva/researchdivision/refs/heads/main/src/routes/blogs/blogs/blog6/ch1/img1.png">
 </div>
 
 ## A “Gold Factory” in Space Was Just Found
@@ -43,7 +43,7 @@ NASA’s **Perseverance rover** recently found a **smooth, egg-shaped rock** in 
 Some samples might contain **fossilized biosignatures**, a major clue in the hunt for past **Martian habitability**.
 
 <div style="text-align: center;">
-  <img src="https://raw.githubusercontent.com/Team-Dhruva/Blogsphotos/refs/heads/main/Blog5/img1.jpg">
+  <img src="https://raw.githubusercontent.com/Team-Dhruva/researchdivision/refs/heads/main/src/routes/blogs/blogs/blog6/ch1/img2.png">
 </div>
 
 ## “We Just Watched a Black Hole Flip the Script”
@@ -53,7 +53,7 @@ Usually known for devouring everything, a black hole was observed **ejecting a m
 This **supercharged beam**, spanning lightyears, gave astronomers a **rare look at black hole flare-ups**, and it's already shaping new theories.
 
 <div style="text-align: center;">
-  <img src="https://raw.githubusercontent.com/Team-Dhruva/Blogsphotos/refs/heads/main/Blog5/img1.jpg">
+  <img src="https://raw.githubusercontent.com/Team-Dhruva/researchdivision/refs/heads/main/src/routes/blogs/blogs/blog6/ch1/img3.png">
 </div>
 
 ## Final Thoughts

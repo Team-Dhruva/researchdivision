@@ -26,7 +26,7 @@
       chapters: [
         {
           id: 1,
-          title: "What the Universe Told Us This Month",
+          title: "What the Universe Told Us This April",
           markdown: blog6chapter1,
         },
         
