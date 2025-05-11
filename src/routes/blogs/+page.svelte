@@ -21,6 +21,7 @@
     {
       id: 6,
       title: "Cosmic Headlines: What the Universe Told Us This Month",
+      author: "",
       description:
         "Astrophysics is a continuously evolving and fascinating field of science.Join us as we explore the breakthroughs in astrophysics each month.",
       chapters: [
