@@ -11,14 +11,15 @@
   function selectChapter(chapter: any) {
     dispatch("selectChapter", chapter); // Emit chapter selection event
   }
+
 </script>
 
 <div class="blog-container">
   <button class="back-btn" on:click={back}>Back to Blogs</button>
-
+  
   <div class="blog-header">
     <h1 class="blog-title">{selectedBlog.title}</h1>
-    <p class="blog-description">{selectedBlog.description}</p>
+    <p class="blog-description">{@html selectedBlog.description}</p>
     <div class="blog-info">
       <small class="blog-author">By {selectedBlog.author}</small>
       {#if selectedBlog.lastUpdated}
