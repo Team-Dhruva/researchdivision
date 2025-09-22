@@ -6,6 +6,7 @@
   import Blog4 from "$lib/BlogCover/Blog4.png";
   import Blog5 from "$lib/BlogCover/Blog5.png";
   import Blog6 from "$lib/BlogCover/Blog6.png";
+  import Blog7 from "$lib/BlogCover/Blog7.png";
   import blog1chapter1 from "./blogs/blog1/ch1/ch1.md";
   import blog1chapter2 from "./blogs/blog1/ch2/ch2.md";
   import blog1chapter3 from "./blogs/blog1/ch3/ch3.md";
@@ -17,8 +18,36 @@
   import blog5chapter1 from "./blogs/blog5/ch1/ch1.md";
   import blog6chapter1 from "./blogs/blog6/ch1/ch1.md";
   import blog6chapter2 from "./blogs/blog6/ch2/ch2.md";
+  import blog7chapter1 from "./blogs/blog7/ch1/ch1.md";
+  import blog7chapter2 from "./blogs/blog7/ch2/ch2.md";
 
   const blogs = [
+    {
+      id: 7,
+      title: "Beyond earth: Life among stars",
+      author: "B M Manohara",
+      description:
+        "*A future where humans are no longer confined to Earth, but instead explore and inhabit distant stars is so thrilling isn’t it?* 
+        Ever thought about living on another planet? Imagine star-ships as homes and distant planets as our new neighborhoods.
+        In this blog, we’re going to explore what life might be like beyond our solar system. What kind of technology would we need? How would people live day to day? We’ll also think about the new cultures and societies that could develop in space.
+        So, are you ready to explore the stars? Let’s dive into the adventure of interstellar civilization and see what the future might hold!",
+      chapters: [
+        {
+          id: 1,
+          title: "Type I Civilization - Planetary power",
+          markdown: blog7chapter1,
+        },
+        {
+          id: 2,
+          title: "Type II Civilization - Stellar  power",
+          markdown: blog7chapter2,
+        },
+      ],
+      nextChapterDate: "",
+      image: Blog2,
+      lastUpdated: "15-02-2025",
+    },
+
     {
       id: 6,
       title: "Cosmic Headlines: What the Universe Told Us This Month",
