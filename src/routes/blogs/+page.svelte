@@ -16,6 +16,7 @@
   import blog3chapter1 from "./blogs/blog3/ch1/ch1.md";
   import blog5chapter1 from "./blogs/blog5/ch1/ch1.md";
   import blog6chapter1 from "./blogs/blog6/ch1/ch1.md";
+  import blog6chapter2 from "./blogs/blog6/ch2/ch2.md";
 
   const blogs = [
     {
@@ -29,6 +30,11 @@
           id: 1,
           title: "What the Universe Told Us This April",
           markdown: blog6chapter1,
+        },
+        {
+          id: 2,
+          title: "What the Universe Told Us This July",
+          markdown: blog6chapter2,
         },
         
       ],
