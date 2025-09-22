@@ -14,7 +14,7 @@ The model was trained on a dataset of daily proton flux measurements recorded in
 To ensure the data was well-scaled for deep learning, it was normalized using **MinMax scaling**. A two-layer LSTM network with **dropout regularization** was then trained using **early stopping** to prevent overfitting.  
 
 
-<div style="text-align: center;">
+<div style="text-align: center; width-60">
   <img src="https://raw.githubusercontent.com/Team-Dhruva/Blogsphotos/refs/heads/main/Blog6/ch2img1.png">
 </div>
 

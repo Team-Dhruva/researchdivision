@@ -163,6 +163,14 @@
     overflow-y: auto; /* allow vertical scroll inside card */
   }
 
+  /* Ensure inline images in card content do not overflow */
+  .blog-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
   .blog-card h3 {
     font-size: 1rem;
     font-weight: 400;

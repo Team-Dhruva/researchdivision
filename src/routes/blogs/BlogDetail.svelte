@@ -1,6 +1,6 @@
-<script>
-  export let selectedBlog;
+<script lang="ts">
   import { createEventDispatcher } from "svelte";
+  export let selectedBlog: any;
 
   const dispatch = createEventDispatcher();
 
@@ -8,7 +8,7 @@
     dispatch("back");
   }
 
-  function selectChapter(chapter) {
+  function selectChapter(chapter: any) {
     dispatch("selectChapter", chapter); // Emit chapter selection event
   }
 </script>
@@ -32,7 +32,13 @@
     {#if Array.isArray(selectedBlog.chapters) && selectedBlog.chapters.length > 0}
       <div class="chapter-grid">
         {#each selectedBlog.chapters as chapter, i}
-          <div class="chapter-card" on:click={() => selectChapter(chapter)}>
+          <div
+            class="chapter-card"
+            role="button"
+            tabindex="0"
+            on:click={() => selectChapter(chapter)}
+            on:keydown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectChapter(chapter); } }}
+          >
             <div class="chapter-index">{i + 1}</div>
             <h3 class="chapter-title">{chapter.title}</h3>
             <br />
@@ -67,6 +73,14 @@
     overflow: hidden;
   }
 
+  /* Constrain any image inside the blog container or children */
+  .blog-container img,
+  .blog-container figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
   .back-btn {
     background-color: #007bff;
     color: white;
@@ -98,6 +112,14 @@
     font-size: 1.2rem;
     color: #ccc;
     margin-bottom: 20px;
+  }
+
+  /* Ensure any images included in the description don't overflow */
+  .blog-description img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
   }
 
   .blog-info {

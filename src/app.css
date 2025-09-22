@@ -99,3 +99,14 @@ button:focus:not(:focus-visible) {
 	width: 1px;
 	white-space: nowrap;
 }
+
+/* Global responsive media: prevent images from overflowing containers */
+img,
+video,
+iframe,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
