@@ -23,7 +23,7 @@ Why is this such a big deal? First off, it would give us a nearly endless supply
 
 *Partially enclosing the host star with rotating structures*
 
-## Fun Fact: 
+**Fun Fact:** 
 If you built a Dyson Sphere around the sun, you'd have so much energy you could power every single device on Earth for billions of years! It’s like having a never-ending battery that makes our current energy problems look tiny by comparison.
 
 ---
