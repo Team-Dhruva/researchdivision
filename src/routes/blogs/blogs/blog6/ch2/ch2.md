@@ -1,8 +1,10 @@
 # Advancements in Astronomy Blog (July)
 
+*July, 2025* 
+**Author: Atharva Agarwal**
 ---
 
-## Forecasting Cosmic Proton Flux with Deep Learning: A New LSTM-Based Approach  
+### Forecasting Cosmic Proton Flux with Deep Learning: A New LSTM-Based Approach  
 
 A recent study introduces a deep learning model designed to predict daily cosmic ray proton flux—an important task for ensuring the safety of satellites, astronauts, and space-based systems. These high-energy protons, influenced by solar and interstellar activity, can interfere with communication networks and satellite operations. Accurate forecasting of proton flux is essential for space weather planning and risk management.  
 
@@ -28,7 +30,7 @@ T, Kanishkaa & S, Mabel & JR, Jefnishya & S, Anandaraj. (2025). *Proton Flux For
 
 ---
 
-## Tracking the Sun: On-Orbit Performance of the Hard X-ray Imager on ASO-S  
+### Tracking the Sun: On-Orbit Performance of the Hard X-ray Imager on ASO-S  
 
 The Hard X-ray Imager (HXI) on board the Advanced Space-based Solar Observatory (ASO-S) has been quietly capturing high-energy solar activity from orbit. A recent study evaluates how well the instrument is performing in space, confirming that overall, it’s working as intended. At the same time, it identifies a few patterns and irregularities worth monitoring to ensure long-term data quality.  
 
@@ -51,7 +53,7 @@ Liu, W., Wang, H., Zhang, Z. et al. (2025). *On-Orbit Performance Analysis of th
 
 ---
 
-## A Cosmic View of Life on Earth: Visualizing Biodiversity Through the Lens of Astronomy  
+### A Cosmic View of Life on Earth: Visualizing Biodiversity Through the Lens of Astronomy  
 
 Biology and astrophysics might seem worlds apart, but a new interdisciplinary project is proving they can beautifully intersect. “A Cosmic View of Life on Earth” brings a fresh perspective to biological data visualization by adapting techniques and tools originally designed to explore the universe. The goal? To better understand Earth’s immense biodiversity through the kind of immersive, intuitive visual frameworks used in space science.  
 
@@ -71,7 +73,7 @@ Duchemin, Wandrille et al. (2025). *A Cosmic View of Life on Earth: Hierarchical
 
 ---
 
-## Fine-Tuning the Giants: Smarter Adjustment Strategies for Dual Reflector Antennas  
+### Fine-Tuning the Giants: Smarter Adjustment Strategies for Dual Reflector Antennas  
 
 Large dual-reflector antennas are critical for high-frequency communication, but environmental factors like wind or heat can subtly deform their surfaces—hurting performance. This study proposes a full-path active adjustment strategy to keep these antennas operating at their best across all elevation angles.  
 
