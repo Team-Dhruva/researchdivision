@@ -7,19 +7,32 @@
   import Blog5 from "$lib/BlogCover/Blog5.png";
   import Blog6 from "$lib/BlogCover/Blog6.png";
   import Blog7 from "$lib/BlogCover/Blog7.png";
+
   import blog1chapter1 from "./blogs/blog1/ch1/ch1.md";
   import blog1chapter2 from "./blogs/blog1/ch2/ch2.md";
   import blog1chapter3 from "./blogs/blog1/ch3/ch3.md";
   import blog1chapter4 from "./blogs/blog1/ch4/ch4.md";
   import blog1chapter5 from "./blogs/blog1/ch5/ch5.md";
+
   import blog2chapter1 from "./blogs/blog2/ch1/ch1.md";
   import blog2chapter2 from "./blogs/blog2/ch2/ch2.md";
+
   import blog3chapter1 from "./blogs/blog3/ch1/ch1.md";
+
   import blog5chapter1 from "./blogs/blog5/ch1/ch1.md";
+
   import blog6chapter1 from "./blogs/blog6/ch1/ch1.md";
   import blog6chapter2 from "./blogs/blog6/ch2/ch2.md";
+
   import blog7chapter1 from "./blogs/blog7/ch1/ch1.md";
   import blog7chapter2 from "./blogs/blog7/ch2/ch2.md";
+  import blog7chapter3 from "./blogs/blog7/ch3/ch3.md";
+  import blog7chapter4 from "./blogs/blog7/ch4/ch4.md";
+  import blog7chapter5 from "./blogs/blog7/ch5/ch5.md";
+  import blog7chapter6 from "./blogs/blog7/ch6/ch6.md";
+  import blog7chapter7 from "./blogs/blog7/ch7/ch7.md";
+  import blog7chapter8 from "./blogs/blog7/ch8/ch8.md";
+  import blog7chapter9 from "./blogs/blog7/ch9/ch9.md";
 
   const blogs = [
     {
@@ -42,9 +55,44 @@
           title: "Type II Civilization - Stellar  power",
           markdown: blog7chapter2,
         },
+        {
+          id: 3,
+          title: "Type III Civilization - Galactic  power",
+          markdown: blog7chapter3,
+        },
+        {
+          id: 4,
+          title: "Scaling Up: Earth's Journey from 0.7 to a Type I Civilization",
+          markdown: blog7chapter4,
+        },
+        {
+          id: 5,
+          title: "Source of Renewable Energy: Dyson Sphere ",
+          markdown: blog7chapter5,
+        },
+        {
+          id: 6,
+          title: "New Frontiers: Embracing Revolutionary Ideologies",
+          markdown: blog7chapter6,
+        },
+        {
+          id: 7,
+          title: "Space Habitats",
+          markdown: blog7chapter7,
+        },
+        {
+          id: 8,
+          title: "Interstellar Travel",
+          markdown: blog7chapter8,
+        },
+        {
+          id: 9,
+          title: "References",
+          markdown: blog7chapter9,
+        },
       ],
       nextChapterDate: "",
-      image: Blog2,
+      image: Blog7,
       lastUpdated: "22-09-2025",
     },
 
