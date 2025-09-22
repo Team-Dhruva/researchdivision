@@ -8,19 +8,22 @@ Why is this such a big deal? First off, it would give us a nearly endless supply
 <div style="text-align: center; width-60">
   <img src="https://raw.githubusercontent.com/Team-Dhruva/Blogsphotos/refs/heads/main/Blog7/ch5/img1.png">
 </div>
+
 *Enclosing the entire host star with some gaps for the light to get transmitted*
 
 <div style="text-align: center; width-60">
   <img src="https://raw.githubusercontent.com/Team-Dhruva/Blogsphotos/refs/heads/main/Blog7/ch5/img2.png">
 </div>
+
 *Enclosing the entire host star with satellites which traps the energy*
 
 <div style="text-align: center; width-60">
   <img src="https://raw.githubusercontent.com/Team-Dhruva/Blogsphotos/refs/heads/main/Blog7/ch5/img3.png">
 </div>
+
 *Partially enclosing the host star with rotating structures*
 
-###Fun Fact: 
+## Fun Fact: 
 If you built a Dyson Sphere around the sun, you'd have so much energy you could power every single device on Earth for billions of years! It’s like having a never-ending battery that makes our current energy problems look tiny by comparison.
 
 ---
