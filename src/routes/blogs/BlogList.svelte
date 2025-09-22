@@ -1,24 +1,49 @@
-<script>
+<script lang="ts">
   import Nav from '$lib/Nav.svelte';
-  export let blogs;
   import { createEventDispatcher, onMount } from 'svelte';
+
+  type Blog = {
+    id: number;
+    title: string;
+    author: string;
+    description: string;
+    chapters: unknown[];
+    image: string;
+    lastUpdated?: string;
+    nextChapterDate?: string;
+  };
+
+  export let blogs: Blog[];
+
   const dispatch = createEventDispatcher();
 
-  function selectBlog(blog) {
+  function selectBlog(blog: Blog) {
     dispatch('selectBlog', blog);
   }
 
   onMount(() => {
-    document.body.style.overflow = 'hidden';
-    const container = document.querySelector('.blog-slider');
-    container.addEventListener('wheel', (e) => {
-      if (e.deltaY === 0) return;
-      e.preventDefault();
-      container.scrollBy({
-        left: e.deltaY,
-        behavior: 'smooth',
-      });
-    });
+    // Do not lock body scroll. Provide horizontal scroll with wheel when not over a scrollable card
+    const container = document.querySelector('.blog-slider') as HTMLElement | null;
+    if (!container) return;
+    container.addEventListener(
+      'wheel',
+      (e: WheelEvent) => {
+        const target = e.target as HTMLElement | null;
+        // If hovering a vertically scrollable area and it can scroll, let default happen
+        const card = target?.closest?.('.blog-card') as HTMLElement | null;
+        const content = card?.querySelector('.blog-content') as HTMLElement | null;
+        const canScrollVertically = !!content && content.scrollHeight > content.clientHeight;
+        if (canScrollVertically) return; // allow vertical scroll inside card
+
+        if (e.deltaY === 0) return;
+        e.preventDefault();
+        container.scrollBy({
+          left: e.deltaY,
+          behavior: 'smooth',
+        });
+      },
+      { passive: false }
+    );
   });
 </script>
 
@@ -29,7 +54,13 @@
   <div class="blog-slider">
     <div class="blog-list">
       {#each blogs as blog}
-        <div class="blog-card" on:click={() => selectBlog(blog)}>
+        <div
+          class="blog-card"
+          role="button"
+          tabindex="0"
+          on:click={() => selectBlog(blog)}
+          on:keydown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectBlog(blog); } }}
+        >
           <div class="image-wrapper">
             <img class="blog-image" src={blog.image} alt={blog.title} />
           </div>
@@ -47,23 +78,18 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-  html, body {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  :global(body) {
     font-family: 'Poppins', sans-serif;
     background: radial-gradient(ellipse at top, #0b0b1f 0%, #000 100%);
   }
 
   .blog-container {
-    position: absolute;
-    top: 60px;
-    bottom: 0;
     width: 100%;
-    padding: 20px 0;
+    padding: 80px 0 20px; /* account for header */
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
   }
 
   h2 {
@@ -133,7 +159,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 100%;
+    height: 220px; /* fixed preview height */
+    overflow-y: auto; /* allow vertical scroll inside card */
   }
 
   .blog-card h3 {
