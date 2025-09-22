@@ -6,7 +6,7 @@
   import Blog4 from "$lib/BlogCover/Blog4.png";
   import Blog5 from "$lib/BlogCover/Blog5.png";
   import Blog6 from "$lib/BlogCover/Blog6.png";
-  import Blog7 from "$lib/BlogCover/Blog7.jpeg";
+  import Blog7 from "$lib/BlogCover/Blog7.png";
   import blog1chapter1 from "./blogs/blog1/ch1/ch1.md";
   import blog1chapter2 from "./blogs/blog1/ch2/ch2.md";
   import blog1chapter3 from "./blogs/blog1/ch3/ch3.md";
