@@ -1,10 +1,10 @@
 <script>
     import { marked } from 'marked'; 
 
-    import Ch1_import from "../../../../static/iaposts/chapter1.md?raw"
+    import Ch1_import from "./posts/chapter1.md?raw"
     const Chapter1 = marked(Ch1_import);
 
-    import Ch2_import from "../../../../static/iaposts/chapter2.md?raw"
+    import Ch2_import from "./posts/chapter2.md?raw"
     const Chapter2 = marked(Ch2_import);
 
     function scrollToChapter(id) {
@@ -18,7 +18,7 @@
 <div class="Main">
     <h1 class="Head">NAKSHATRA</h1>
 
-    <p class="Desc">nakshatra blog desc</p>
+    <p class="Desc">Exploring the ancient indian system</p>
     
     <div class="TOC-Container">
         <div class="TableOfContents">
@@ -71,7 +71,7 @@
     .Main {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center content horizontally */
+        align-items: center;
         padding: 20px;
     }
 
@@ -82,31 +82,31 @@
         letter-spacing: 1px;
         line-height: 1.5;
         margin: 10px 0;
-        text-align: center; /* Ensure text inside is also centered */
-        width: 100%; /* Take full width to be centered in flex container */
+        text-align: center;
+        width: 100%;
     }
 
     .Desc {
         text-align: center;
         max-width: 80%;
-        font-size: 1em; /* Use normal text size */
+        font-size: 1em;
         color: white;
         letter-spacing: 1px;
         line-height: 1.5;
-        margin: 10px 0; /* Add spacing */
+        margin: 10px 0;
     }
 
     .TOC-Container {
-        width: 200px; /* Adjust width as needed */
-        margin-right: 20px; /* Add some space between TOC and main content */
-        flex-shrink: 0; /* Prevent TOC from shrinking */
+        width: 300px; /* Increased width from 200px to 300px */
+        margin-right: 20px;
+        flex-shrink: 0;
     }
 
     .TableOfContents {
         text-align: left;
-        font-size: 1.2em; /* Slightly smaller than before */
+        font-size: 1.2em;
         color: white;
-        margin-top: 0; /* Adjust top margin */
+        margin-top: 0;
         margin-bottom: 5px;
         padding-bottom: 2px;
         border-bottom: 1px solid white;
@@ -130,43 +130,45 @@
         background: none;
         border: none;
         color: white;
-        font-size: 0.9em; /* Adjust button font size */
+        font-size: 0.9em;
         cursor: pointer;
         text-align: left;
         padding: 3px 0;
         display: block;
+        width: 100%; /* Make buttons take full width */
+        text-align: left; /* Ensure text aligns left */
     }
 
     .TOC-Table button:hover {
         color: var(--heading-color);
     }
 
-    /* New class for the rounded background of the TOC table */
     .rounded-box {
-        background-color: var(--chapter-background); /* Gray background */
-        border-radius: 10px; /* Rounded corners */
-        padding: 10px; /* Add some padding inside the box */
+        background-color: var(--chapter-background);
+        border-radius: 10px;
+        padding: 15px; /* Increased padding */
     }
+
     .TableOfContents {
-        text-align: left; /* Left align the text */
+        text-align: left;
         font-size: 1.5em;
-        color: white; /* Assuming you want TOC text white */
+        color: white;
         margin: 10px 0;
-        padding-bottom: 5px; /* Add some space above the separator */
-        border-bottom: 1px solid white; /* Horizontal line separator */
-        width: 100%; /* Make the separator span the width */
+        padding-bottom: 5px;
+        border-bottom: 1px solid white;
+        width: 100%;
     }
 
     .BlogContent {
-        width: 90%; /* Default to a large percentage for smaller screens */
-        max-width: 70%; /* Limit to 70% on larger screens */
-        background-color: #2e2e2e; /* Gray background */
-        border-radius: 10px; /* Rounded corners */
+        width: 90%;
+        max-width: 70%;
+        background-color: #2e2e2e;
+        border-radius: 10px;
         padding: 20px;
-        margin: 20px 0; /* Add some top and bottom margin */
+        margin: 20px 0;
         display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Left align text within */
+        align-items: flex-start;
     }
 
     .ChapterTitle {
@@ -176,12 +178,33 @@
         letter-spacing: 1px;
         line-height: 1.5;
         text-align: center;
-        width: 100%; /* Take full width to be centered in flex container */
-        margin: 15px 0; /* Add more spacing for chapter titles */
-    } .AuthorName{
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .AuthorName{
         font-size: 1.2rem;
         font-weight: 600;
         margin: 0;
         color: var(--heading-color)
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .TOC-Container {
+            width: 250px; /* Slightly smaller on tablets */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .TOC-Container {
+            width: 100%; /* Full width on mobile */
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        
+        .Main {
+            align-items: stretch;
+        }
     }
 </style>

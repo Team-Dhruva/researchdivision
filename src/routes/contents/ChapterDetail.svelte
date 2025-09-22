@@ -78,6 +78,27 @@
     font-size: 1.1rem;
     line-height: 1.6;
     color: #eaeaea;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  /* Ensure images in markdown never overflow the container */
+  .markdown-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 12px auto;
+  }
+
+  /* Optional: keep tables and code blocks within bounds */
+  .markdown-content table,
+  .markdown-content pre,
+  .markdown-content code,
+  .markdown-content iframe,
+  .markdown-content video {
+    max-width: 100%;
+    overflow-x: auto;
   }
 
   .no-content {
