@@ -27,7 +27,11 @@
       title: "Beyond earth: Life among stars",
       author: "B M Manohara",
       description:
-        "*A future where humans are no longer confined to Earth, but instead explore and inhabit distant stars is so thrilling isn’t it?* Ever thought about living on another planet? Imagine star-ships as homes and distant planets as our new neighborhoods.In this blog, we’re going to explore what life might be like beyond our solar system. What kind of technology would we need? How would people live day to day? We’ll also think about the new cultures and societies that could develop in space.So, are you ready to explore the stars? Let’s dive into the adventure of interstellar civilization and see what the future might hold!",
+        '*A future where humans are no longer confined to Earth, but instead explore and inhabit distant stars is so thrilling isn’t it?*
+        Ever thought about living on another planet? 
+        Imagine star-ships as homes and distant planets as our new neighborhoods.In this blog, we’re going to explore what life might be like beyond our solar system. 
+        What kind of technology would we need? How would people live day to day? We’ll also think about the new cultures and societies that could develop in space.
+        So, are you ready to explore the stars? Let’s dive into the adventure of interstellar civilization and see what the future might hold!',
       chapters: [
         {
           id: 1,
