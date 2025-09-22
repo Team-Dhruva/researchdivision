@@ -1,23 +1,31 @@
 <script>
+  import Nav from '$lib/Nav.svelte';
   export let blogs;
-  import { createEventDispatcher } from 'svelte';
+  import { createEventDispatcher, onMount } from 'svelte';
   const dispatch = createEventDispatcher();
 
   function selectBlog(blog) {
-    dispatch('selectBlog', blog); // Emit blog selection event
+    dispatch('selectBlog', blog);
   }
-  function scrollBlogs(direction) {
+
+  onMount(() => {
+    document.body.style.overflow = 'hidden';
     const container = document.querySelector('.blog-slider');
-    const scrollAmount = container.clientWidth;
-    container.scrollBy({
-      left: direction * scrollAmount,
-      behavior: 'smooth',
+    container.addEventListener('wheel', (e) => {
+      if (e.deltaY === 0) return;
+      e.preventDefault();
+      container.scrollBy({
+        left: e.deltaY,
+        behavior: 'smooth',
+      });
     });
-  }
+  });
 </script>
 
+<!-- <Nav /> -->
+
 <div class="blog-container">
-  <h2 style="font-size:25px;"><strong>BLOGS</strong></h2>
+  <h2><strong>BLOGS</strong></h2>
   <div class="blog-slider">
     <div class="blog-list">
       {#each blogs as blog}
@@ -34,28 +42,44 @@
       {/each}
     </div>
   </div>
-  <button class="nav prev" on:click={() => scrollBlogs(-1)}>&lt;</button>
-  <button class="nav next" on:click={() => scrollBlogs(1)}>&gt;</button>
 </div>
 
 <style>
-  .blog-container {
-    position: relative;
-    width: 100%;
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+  html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(ellipse at top, #0b0b1f 0%, #000 100%);
+  }
+
+  .blog-container {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
   }
 
   h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #fff;
+    font-size: 26px;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 1px;
   }
 
   .blog-slider {
-    display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    flex-grow: 1;
   }
 
   .blog-slider::-webkit-scrollbar {
@@ -64,111 +88,91 @@
 
   .blog-list {
     display: flex;
-    gap: 20px;
-    padding: 10px;
+    gap: 25px;
+    padding: 10px 30px;
   }
 
   .blog-card {
-    flex: 0 0 calc(30% - 50px); /* Reduced size */
-    max-width: calc(30% - 50px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    flex: 0 0 20%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 16px rgba(128, 90, 213, 0.2); /* light purple glow */
     overflow: hidden;
-    background: #121212;
-    border: 2px solid white;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    color: white;
   }
 
   .blog-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+    transform: translateY(-6px) scale(1.015);
+    box-shadow: 0 10px 25px rgba(178, 102, 255, 0.4); /* light purple glow */
   }
 
   .image-wrapper {
     position: relative;
     width: 100%;
-    padding-top: 140%; /* 5:7 Aspect Ratio */
+    padding-top: 140%;
     overflow: hidden;
   }
 
   .blog-image {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
   .blog-content {
-    padding: 15px;
+    padding: 16px;
+    background: #141414;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 10px;
-    background: #1c1c1c;
-    color: #fff;
+    height: 100%;
   }
 
   .blog-card h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #d6b3ff;
     margin: 0;
-    color: #ffcc00;
   }
 
   .blog-card p {
-    font-size: 1rem;
-    margin: 0;
-    color: #ddd;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.4;
     flex-grow: 1;
+    margin: 0;
   }
 
   .blog-card small {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     color: #999;
   }
 
-  .nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    z-index: 10;
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .blog-card {
+      flex: 0 0 30%;
+    }
   }
 
-  .nav.prev {
-    left: 10px;
-  }
-
-  .nav.next {
-    right: 10px;
-  }
-
-  /* Responsive Design */
   @media (max-width: 768px) {
     .blog-card {
-      flex: 0 0 calc(45% - 20px); /* Adjusted for smaller screens */
-      max-width: 45%;
+      flex: 0 0 55%;
     }
   }
 
   @media (max-width: 480px) {
     .blog-card {
-      flex: 0 0 calc(80% - 20px);
-      max-width: 80%;
+      flex: 0 0 85%;
     }
   }
 </style>

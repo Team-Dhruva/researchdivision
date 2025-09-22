@@ -163,6 +163,5 @@
 </script>
 
 <div>
-  <h1>Dive into Amazing reads!!!</h1>
   <Blog {blogs} />
 </div>

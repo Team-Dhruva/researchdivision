@@ -2,6 +2,7 @@
 <script>
     import { goto } from '$app/navigation';
 
+    
     const navigate = (route) => {
         goto(route);
     };
